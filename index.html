@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- saved from url=(0089)file:///Users/gilsunshine/Documents/p5%20Projects/2017%2011%2009/empty-example/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta name="viewport" width="device-width," initial-scale="1.0," maximum-scale="1.0," user-scalable="0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <script src="./assets/clipboard.min.js"></script>
+
+
+
+    <style>
+      iframe{ border: none;}
+
+      #headline{
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 40px;
+        display: flex;
+        height:150px;
+        align-items: center;
+        align-content: center;
+        justify-content: center
+      }
+
+      #text-container{
+        position: relative;
+        float: left;
+        font-family: 'Roboto', sans-serif;
+        width: 600px;
+        height: 600px;
+        background-color: #FFF0F5;
+        padding: 60px;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;         /* Opera/IE 8+ */
+        margin: 10px;
+
+      }
+
+      #main-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #inst{
+        font-weight: bold;
+      }
+
+      .btn{
+        font-family: 'Roboto', sans-serif;
+        background-color: #EEE; /* Green */
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+    <div id="headline"> String Geometry Instructions Test</div>
+    <div id="main-content">
+      <div>
+        <iframe name="drawing-frame" src="./assets/drawing.html"  width="600px" height="600px" border="none" overflow="hidden" scrolling="no" margin="10px">
+        </iframe>
+      </div>
+      <div id="text-container">
+        <div id="inst">Instructions:</div><br>
+        <div id="instructions"></div>
+        <button class="btn" data-clipboard-action="copy" data-clipboard-target="#instructions">Copy Instructions</button>
+      </div>
+    </div>
+    <script>
+      var clipboard = new ClipboardJS('.btn');
+
+      clipboard.on('success', function(e) {
+          console.log(e);
+        });
+
+      clipboard.on('error', function(e) {
+        console.log(e);
+      });
+
+    </script>
+  </body>

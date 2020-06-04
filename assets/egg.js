@@ -4,7 +4,7 @@ let dashes = []
 let intersections = []
 
 function setup() {
-  createCanvas(600, 600)
+  createCanvas(windowWidth, windowWidth)
   background(240)
   angleMode(DEGREES)
   next = new NextButton()
@@ -68,4 +68,5 @@ function mousePressed(){
     step = 0
     clearText()
   }
+  return false;
 }

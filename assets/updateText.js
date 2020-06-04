@@ -46,11 +46,10 @@ function advanceText(){
     parent.document.getElementById("instructions").appendChild(div)
     let br = document.createElement("BR")
     parent.document.getElementById("instructions").appendChild(br)
-    
+
   }
 }
 
 function clearText(){
-  console.log("hello")
   parent.document.getElementById("instructions").innerHTML = ""
 }

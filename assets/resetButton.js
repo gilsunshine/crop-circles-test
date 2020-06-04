@@ -1,16 +1,18 @@
 class ResetButton {
   constructor(){
-    this.diameter = 30
+    this.diameter = 25
     this.x = windowWidth/2 - 25
     this.y = windowHeight - (1.5 * this.diameter)
-    this.color = color(256, 0, 256)
-    this.outline = color(0, 150, 256)
+    this.color = ochre()
+    this.outline = blueGrey()
     this.hovered = false
+    this.width = 4
+    this.length = 15
   }
 
   display(){
     this.isHovered()
-    strokeWeight(3);
+    strokeWeight(2.5);
     stroke(this.outline)
     fill(this.color);
     drawingContext.setLineDash([])
@@ -18,18 +20,18 @@ class ResetButton {
     translate(this.x, this.y)
     rotate(45)
     beginShape();
-    vertex(-5, 17);
-    vertex(5, 17);
-    vertex(5, 5);
-    vertex(17, 5);
-    vertex(17, -5);
-    vertex(5, -5);
-    vertex(5, -17);
-    vertex(-5, -17);
-    vertex(-5, -5);
-    vertex(-17, -5);
-    vertex(-17, 5);
-    vertex(-5, 5)
+    vertex(-this.width, this.length);
+    vertex(this.width, this.length);
+    vertex(this.width, this.width);
+    vertex(this.length, this.width);
+    vertex(this.length, -this.width);
+    vertex(this.width, -this.width);
+    vertex(this.width, -this.length);
+    vertex(-this.width, -this.length);
+    vertex(-this.width, -this.width);
+    vertex(-this.length, -this.width);
+    vertex(-this.length, this.width);
+    vertex(-this.width, this.width)
     endShape(CLOSE);
     pop()
   }
@@ -38,10 +40,10 @@ class ResetButton {
     this.distance = dist(this.x, this.y, mouseX, mouseY)
     if (this.distance < this.diameter / 2) {
       this.hovered = true
-      this.outline = color(256, 150, 0)
+      this.outline = pumpkin()
     } else {
       this.hovered = false
-      this.outline = color(0, 150, 256)
+      this.outline = blueGrey()
     }
   }
 }

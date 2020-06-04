@@ -1,14 +1,17 @@
 class Intersection {
-  constructor(x, y, d, r, g, b){
+  constructor(x, y, d, col, outline, weight){
     this.diameter = d
     this.x = x
     this.y = y
-    this.color = color(r, g, b)
+    this.col = col
+    this.outline = outline
+    this.weight = weight
   }
 
   display(){
-    noStroke()
-    fill(this.color);
+    strokeWeight(this.weight)
+    stroke(this.outline)
+    fill(this.col);
     drawingContext.setLineDash([])
     ellipse(this.x, this.y, this.diameter, this.diameter);
   }

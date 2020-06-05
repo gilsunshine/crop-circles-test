@@ -87,3 +87,8 @@ function darkRed(){
   let col = color(150, 0, 0)
   return col
 }
+
+function lime(){
+  let col = color(235, 255, 0)
+  return col
+}

@@ -40,7 +40,7 @@ class ResetButton {
     this.distance = dist(this.x, this.y, mouseX, mouseY)
     if (this.distance < this.diameter / 2) {
       this.hovered = true
-      this.outline = pumpkin()
+      this.outline = lime()
     } else {
       this.hovered = false
       this.outline = lightBlue()

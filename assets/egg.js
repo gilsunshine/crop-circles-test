@@ -57,12 +57,12 @@ function mousePressed(){
       let dash = new DashedLine(windowWidth - windowWidth / 6, windowHeight / 2, windowWidth / 6, windowHeight / 2, bluish(), darkBlue(), 1, 6, 5, 5, 6)
       dashes.push(dash)
     }else if (step == 2) {
-      let arc = new DrawArc(intPoint, windowHeight / 2, r1, r1, 180, -90, ochre(), darkRed(), brown(), 1.5, 2, 5);
+      let arc = new DrawArc(intPoint, windowHeight / 2, r1, r1, 180, -90, ochre(), ochre(), darkBlue(), brown(), 1.5, 2, 5);
       let arm = new DrawArm(intPoint, windowHeight / 2, r1, 180, -90, ochre(), 1.5, .5, 4, 2);
       arcs.push(arc)
       arms.push(arm)
     }else if (step == 3) {
-      let arc = new DrawArc(intPoint + arcSpacing, windowHeight / 2, r2, r2, 180, 90, ochre(), darkRed(), brown(),1.5, 2, 5);
+      let arc = new DrawArc(intPoint + arcSpacing, windowHeight / 2, r2, r2, 180, 90, ochre(), ochre(), darkBlue(), brown(),1.5, 2, 5);
       let arm = new DrawArm(intPoint + arcSpacing, windowHeight / 2, r2, 180, 90, ochre(), 1.5, .5, 4, 2);
       arcs.push(arc)
       arms.push(arm)
@@ -80,7 +80,7 @@ function mousePressed(){
     }else if (step == 6){
       let int = llIntersect(windowWidth - windowWidth / 6, windowHeight / 2, windowWidth / 6, windowHeight / 2, intersections[0].x, windowHeight - windowHeight / 6, intersections[0].x, windowHeight / 6)
       arcs = []
-      intersections = [new Intersection(int.x, int.y, 10, lightPink(), bluish(), 2)]
+      intersections = [new Intersection(int.x, int.y, 8, lightPink(), bluish(), 2)]
       clear()
       background(cream())
     }

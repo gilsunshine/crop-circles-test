@@ -1,8 +1,9 @@
 class DrawArc {
-  constructor(x, y, d1, d2, angle, rotation, col, cp, endCol, str, speed, nodeSize){
+  constructor(x, y, d1, d2, angle, rotation, col, cp, cpOut, endCol, str, speed, nodeSize){
     this.currentAngle = 0
     this.col = col
     this.cp = cp
+    this.cpOut = cpOut
     this.endCol = endCol
     this.x = x
     this.y = y
@@ -18,15 +19,16 @@ class DrawArc {
   display(){
     if(this.currentAngle > 0){
       push()
+      drawingContext.setLineDash([])
       translate(this.x, this.y)
       rotate(this.rotation)
-      noStroke()
+      strokeWeight(1)
+      stroke(this.cpOut)
       fill(this.cp)
       ellipse(0, 0, this.nodeSize)
       noFill()
       strokeWeight(this.str)
       stroke(this.col)
-      drawingContext.setLineDash([])
       arc(0, 0, this.d1, this.d2, 0, this.currentAngle)
       noStroke()
       fill(this.endCol)

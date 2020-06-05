@@ -19,7 +19,7 @@ function wheat(){
 }
 
 function pumpkin(){
-  let col = color(216, 143, 65)
+  let col = color(230, 143, 65)
   return col
 }
 
@@ -69,7 +69,12 @@ function brown(){
 }
 
 function darkBlue(){
-  let col = color(0, 0, 200)
+  let col = color(0, 0, 150)
+  return col
+}
+
+function lightBlue(){
+  let col = color(100, 150, 255)
   return col
 }
 
@@ -79,6 +84,6 @@ function lightPink(){
 }
 
 function darkRed(){
-  let col = color(200, 0, 0)
+  let col = color(150, 0, 0)
   return col
 }

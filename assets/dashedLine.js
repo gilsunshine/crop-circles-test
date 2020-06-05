@@ -15,17 +15,25 @@ class DashedLine {
     this.currentLength = 0
     this.vector1 = createVector(x1, y1)
     this.vector2 = createVector(x2, y2)
-  }
+    this.xFactor = x2 - x1
+    this.yFactor = y2 - y1
+    }
 
   display(){
+      drawingContext.setLineDash([this.dash, this.gap])
+      push()
+      translate(this.x1, this.y1)
+      let v0 = createVector(0,0)
+      let v1 = createVector((this.vector2.x - this.vector1.x), (this.vector2.y- this.vector1.y))
+      v1.setMag(this.currentLength)
       strokeWeight(this.str)
       stroke(this.col)
-      drawingContext.setLineDash([this.dash, this.gap])
-      line(this.vector1.x, this.vector1.y, this.vector2.x, this.vector2.y)
+      line(0,0, v1.x, v1.y)
       noStroke()
       fill(this.nodeColor)
-      ellipse(this.x1, this.y1, this.nodeSize, this.nodeSize)
-      ellipse(this.x2, this.y2, this.nodeSize, this.nodeSize)
+      ellipse(0, 0, this.nodeSize, this.nodeSize)
+      ellipse(v1.x, v1.y, this.nodeSize, this.nodeSize)
+      pop()
   }
 
   update(){

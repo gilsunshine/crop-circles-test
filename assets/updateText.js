@@ -18,7 +18,7 @@ function advanceText(){
   }
   if (step == 3){
     let div = document.createElement("DIV")
-    div.innerHTML = "3. Draw a starting point starting from a second point along the line, such that the two arcs intersect at two points."
+    div.innerHTML = "3. Draw an arc starting from a second point along the line, such that the two arcs intersect at two points."
     parent.document.getElementById("instructions").appendChild(div)
     let br = document.createElement("BR")
     parent.document.getElementById("instructions").appendChild(br)

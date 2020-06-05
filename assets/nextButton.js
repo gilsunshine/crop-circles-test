@@ -4,7 +4,7 @@ class NextButton {
     this.x = windowWidth/2 + 25
     this.y = windowHeight - (1.5 * this.diameter)
     this.color = ochre()
-    this.outline = blueGrey()
+    this.outline = lightBlue()
     this.hovered = false
   }
 
@@ -24,7 +24,7 @@ class NextButton {
       this.outline = pumpkin()
     } else {
       this.hovered = false
-      this.outline = blueGrey()
+      this.outline = lightBlue()
     }
   }
 }

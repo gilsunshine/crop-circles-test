@@ -4,7 +4,7 @@ class ResetButton {
     this.x = windowWidth/2 - 25
     this.y = windowHeight - (1.5 * this.diameter)
     this.color = ochre()
-    this.outline = lightBlue()
+    this.outline = bluish()
     this.hovered = false
     this.width = 4
     this.length = 15
@@ -43,7 +43,7 @@ class ResetButton {
       this.outline = lime()
     } else {
       this.hovered = false
-      this.outline = lightBlue()
+      this.outline = bluish()
     }
   }
 }

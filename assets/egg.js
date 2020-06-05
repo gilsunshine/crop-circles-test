@@ -71,8 +71,8 @@ function mousePressed(){
       noStroke()
       fill(256, 150,0)
 
-      intersections.push(new Intersection(ints[0][0], ints[0][1], 8, lightPink(), bluish(), 2))
-      intersections.push(new Intersection(ints[1][0], ints[1][1], 8, lightPink(), bluish(), 2))
+      intersections.push(new Intersection(ints[0][0], ints[0][1], 8, lightPink(), darkBlue(), 2))
+      intersections.push(new Intersection(ints[1][0], ints[1][1], 8, lightPink(), darkBlue(), 2))
 
     }else if (step == 5){
       dash = new DashedLine(intersections[0].x, windowHeight - windowHeight / 6, intersections[0].x, windowHeight / 6, bluish(), darkBlue(), 1, 6, 5, 5, 6)
@@ -80,7 +80,7 @@ function mousePressed(){
     }else if (step == 6){
       let int = llIntersect(windowWidth - windowWidth / 6, windowHeight / 2, windowWidth / 6, windowHeight / 2, intersections[0].x, windowHeight - windowHeight / 6, intersections[0].x, windowHeight / 6)
       arcs = []
-      intersections = [new Intersection(int.x, int.y, 8, lightPink(), bluish(), 2)]
+      intersections = [new Intersection(int.x, int.y, 8, lightPink(), darkBlue(), 2)]
       clear()
       background(cream())
     }

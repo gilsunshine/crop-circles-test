@@ -9,7 +9,7 @@ let r2
 let arcSpacing
 
 function setup() {
-  createCanvas(windowWidth, windowWidth)
+  createCanvas(windowWidth, windowHeight)
   background(cream())
   angleMode(DEGREES)
   next = new NextButton()
@@ -18,7 +18,6 @@ function setup() {
   r1 = random(windowWidth/6, windowWidth/4)
   r2 = r1 - random(-windowWidth/12, windowWidth/12)
   arcSpacing = (r1 + r2)/2 - random(windowWidth/32, windowWidth/20)
-  console.log(arcSpacing)
 }
 
 function draw() {
@@ -102,4 +101,9 @@ function mousePressed(){
 
   }
   return false;
+}
+
+function windowResized() {
+  console.log('hello')
+  resizeCanvas(windowWidth, windowHeight);
 }
